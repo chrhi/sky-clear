@@ -60,6 +60,18 @@ export default {
       fontFamily: {
         sans: ["var(--font-poppins)", "sans-serif"],
       },
+
+      animation: {
+        "bounce-slow": "bounce 2s infinite",
+        float: "float 3s ease-in-out infinite",
+        "float-delay": "float 3s ease-in-out infinite 1.5s",
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -6,13 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.3.4",
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-switch": "^1.1.1",
+    "@libsql/client": "^0.14.0",
+    "drizzle-orm": "^0.37.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "graphql-request": "^7.1.2",
@@ -28,6 +33,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "drizzle-kit": "^0.29.1",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "postcss": "^8",
