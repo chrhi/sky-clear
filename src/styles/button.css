@@ -1,0 +1,67 @@
+.button-primary {
+  appearance: button;
+  background-color: #e83e8c; /* Rose primary color */
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  border: 1px solid #e83e8c;
+  border-radius: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,
+    rgba(46, 54, 80, 0.075) 0 1px 1px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-transform: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-primary:focus:not(:focus-visible),
+.button-primary:focus {
+  outline: 0;
+}
+
+.button-primary:hover {
+  background-color: #d7327c; /* Slightly darker rose */
+  border-color: #d7327c;
+}
+
+.button-primary:focus {
+  background-color: #bf2c6e; /* More muted rose for focus */
+  border-color: #b22863;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,
+    rgba(46, 54, 80, 0.075) 0 1px 1px, rgba(232, 62, 140, 0.5) 0 0 0 0.2rem;
+}
+
+.button-primary:active {
+  background-color: #b22863; /* Darker rose for active state */
+  background-image: none;
+  border-color: #a6245a;
+  box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
+}
+
+.button-primary:active:focus {
+  box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset,
+    rgba(232, 62, 140, 0.5) 0 0 0 0.2rem;
+}
+
+.button-primary:disabled {
+  background-image: none;
+  box-shadow: none;
+  opacity: 0.65;
+  pointer-events: none;
+}

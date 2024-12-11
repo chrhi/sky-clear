@@ -1,9 +1,15 @@
 import PageShell from "@/components/layout/page-shell";
+//import InstagramEngagementDashboard from "../../../modules/dashboard/dashboard-view";
+import InstagramConnect from "@/components/instagram-connect";
 
 export default function Page() {
   return (
     <PageShell title="Dashboard">
-      <h1>hi there this is the main page</h1>
+      {/* <InstagramEngagementDashboard /> */}
+
+      <div className="w-full h-screen flex flex-col justify-center items-center ">
+        <InstagramConnect />
+      </div>
     </PageShell>
   );
 }
