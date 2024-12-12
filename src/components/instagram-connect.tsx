@@ -1,7 +1,5 @@
 "use client";
 
-// }
-
 export default function InstagramConnect() {
   return (
     <div className="flex h-auto bg-gradient-to-br p-8 from-gray-50 via-white to-gray-100 border border-gray-200 shadow-lg my-8 py-8 max-w-md mx-auto rounded-xl flex-col gap-y-4 items-center justify-center w-full">
