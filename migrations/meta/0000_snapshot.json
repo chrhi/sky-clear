@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "a598b07e-e589-4841-9b97-f158955eb7fb",
+  "id": "989aac06-bc6c-4741-bb2e-cd50ad64e57d",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "bluesky_accounts": {
@@ -90,8 +90,8 @@
           "notNull": true,
           "autoincrement": true
         },
-        "username": {
-          "name": "username",
+        "clerk_id": {
+          "name": "clerk_id",
           "type": "text",
           "primaryKey": false,
           "notNull": true,
@@ -115,10 +115,10 @@
         }
       },
       "indexes": {
-        "users_username_unique": {
-          "name": "users_username_unique",
+        "users_clerk_id_unique": {
+          "name": "users_clerk_id_unique",
           "columns": [
-            "username"
+            "clerk_id"
           ],
           "isUnique": true
         }

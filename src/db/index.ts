@@ -1,5 +1,6 @@
 import { drizzle } from "drizzle-orm/libsql";
 import { createClient } from "@libsql/client";
+import * as schema from "./schema";
 
 const turso = createClient({
   url: "libsql://academia-abdellah.turso.io",
@@ -7,4 +8,4 @@ const turso = createClient({
     "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3MzM0MDIxODQsImlkIjoiOWEzMGY4ZjYtYjM2My00ZDM4LTk3NDAtNGE3ODNhOGIwMjQ3In0.CBEkmh87WxKgfcagfVhS7mjpqyaQYAPT7L17a0PJKiX11fmqifBDAdoP81XHYxqevyGoMoOF1Eg0YkBVYUgODQ",
 });
 
-export const db = drizzle(turso);
+export const db = drizzle(turso, { schema });

@@ -14,7 +14,7 @@ export const blueskyAccounts = sqliteTable("bluesky_accounts", {
 
 export const users = sqliteTable("users", {
   id: integer("id").primaryKey({ autoIncrement: true }),
-  clerkUserId: text("username").notNull().unique(),
+  clerkUserId: text("clerk_id").notNull().unique(),
   createdAt: text("created_at").default(sql`CURRENT_TIMESTAMP`),
   updatedAt: text("updated_at").default(sql`CURRENT_TIMESTAMP`),
 });

@@ -10,11 +10,11 @@ import {
 const InstagramFeaturesSection = () => {
   const features = [
     {
-      icon: <MessageCircleIcon className="w-12 h-12 text-pink-500" />,
+      icon: <MessageCircleIcon className="w-12 h-12 text-blue-500" />,
       title: "Smart DM Automation",
       description:
         "Intelligent direct message responses that sound authentically human",
-      color: "from-pink-500 to-rose-500",
+      color: "from-blue-500 to-rose-500",
       size: "md:col-span-2 md:row-span-2",
     },
     {
@@ -44,7 +44,7 @@ const InstagramFeaturesSection = () => {
       title: "Engagement Booster",
       description:
         "Intelligent interaction strategies to increase followers and likes",
-      color: "from-red-500 to-pink-500",
+      color: "from-red-500 to-blue-500",
       size: "md:col-span-1",
     },
   ];
@@ -54,13 +54,13 @@ const InstagramFeaturesSection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-pink-100 text-pink-800 px-4 py-2 rounded-full mb-4">
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full mb-4">
             <InstagramIcon className="w-5 h-5 mr-2" />
             <span className="text-sm font-medium">
               Instagram-Exclusive Features
             </span>
           </div>
-          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 mb-4">
+          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
             Instagram Growth, Reimagined
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -103,7 +103,7 @@ const InstagramFeaturesSection = () => {
                 <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   <a
                     href="#"
-                    className="text-pink-600 font-semibold hover:underline"
+                    className="text-blue-600 font-semibold hover:underline"
                   >
                     Learn More →
                   </a>
@@ -117,7 +117,7 @@ const InstagramFeaturesSection = () => {
         <div className="text-center mt-16">
           <a
             href="/signup"
-            className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:from-pink-700 hover:to-purple-700 transition-all"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all"
           >
             Start Your Instagram Transformation
           </a>

@@ -11,9 +11,9 @@ CREATE TABLE `bluesky_accounts` (
 CREATE UNIQUE INDEX `bluesky_accounts_identifier_unique` ON `bluesky_accounts` (`identifier`);--> statement-breakpoint
 CREATE TABLE `users` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	`username` text NOT NULL,
+	`clerk_id` text NOT NULL,
 	`created_at` text DEFAULT CURRENT_TIMESTAMP,
 	`updated_at` text DEFAULT CURRENT_TIMESTAMP
 );
 --> statement-breakpoint
-CREATE UNIQUE INDEX `users_username_unique` ON `users` (`username`);
+CREATE UNIQUE INDEX `users_clerk_id_unique` ON `users` (`clerk_id`);

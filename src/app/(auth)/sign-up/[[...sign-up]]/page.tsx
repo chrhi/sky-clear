@@ -30,7 +30,7 @@ export default function Page() {
       </div>
 
       {/* Right side - Decorative */}
-      <div className="hidden md:flex md:w-1/2 bg-blue-600 p-12 flex-col justify-between relative">
+      <div className="hidden md:flex md:w-1/2 bg-primary p-12 flex-col justify-between relative">
         <div className="relative z-10">
           <h1 className="text-4xl font-bold text-white mb-6">
             Join Our Platform
@@ -43,8 +43,8 @@ export default function Page() {
 
         {/* Decorative elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -left-1/4 -bottom-1/4 w-2/3 h-2/3 bg-blue-500 rounded-full opacity-20" />
-          <div className="absolute -right-1/4 -top-1/4 w-2/3 h-2/3 bg-blue-500 rounded-full opacity-20" />
+          <div className="absolute -left-1/4 -bottom-1/4 w-2/3 h-2/3 bg-primary rounded-full opacity-20" />
+          <div className="absolute -right-1/4 -top-1/4 w-2/3 h-2/3 bg-primary rounded-full opacity-20" />
         </div>
 
         {/* Footer */}

@@ -26,9 +26,9 @@ const PricingComponent = () => {
       ],
       mostPopular: false,
       buttonText: "Start for Free",
-      icon: <Zap className="w-7 h-7 text-rose-500" />,
-      highlightColor: "border-gray-200 hover:border-rose-300",
-      background: "bg-white hover:bg-rose-50/30",
+      icon: <Zap className="w-7 h-7 text-blue-500" />,
+      highlightColor: "border-gray-200 hover:border-blue-300",
+      background: "bg-white hover:bg-blue-50/30",
       subtext: "Perfect for small teams and individual users",
     },
     {
@@ -44,9 +44,9 @@ const PricingComponent = () => {
       ],
       mostPopular: true,
       buttonText: "Upgrade to Pro",
-      icon: <Crown className="w-7 h-7 text-rose-600" />,
-      highlightColor: "border-rose-500 shadow-2xl shadow-rose-200",
-      background: "bg-gradient-to-br from-rose-50 to-white",
+      icon: <Crown className="w-7 h-7 text-blue-600" />,
+      highlightColor: "border-blue-500 shadow-2xl shadow-blue-200",
+      background: "bg-gradient-to-br from-blue-50 to-white",
       subtext: "Best value for growing businesses",
     },
     {
@@ -63,9 +63,9 @@ const PricingComponent = () => {
       ],
       mostPopular: false,
       buttonText: "Talk to Sales",
-      icon: <ShieldCheck className="w-7 h-7 text-rose-700" />,
-      highlightColor: "border-gray-200 hover:border-rose-400",
-      background: "bg-white hover:bg-rose-50/30",
+      icon: <ShieldCheck className="w-7 h-7 text-blue-700" />,
+      highlightColor: "border-gray-200 hover:border-blue-400",
+      background: "bg-white hover:bg-blue-50/30",
       subtext: "Tailored solutions for large organizations",
     },
   ];
@@ -95,7 +95,7 @@ const PricingComponent = () => {
                 onClick={() => setBillingCycle("monthly")}
                 className={`px-6 py-2.5 rounded-full transition-all duration-300 ${
                   billingCycle === "monthly"
-                    ? "bg-rose-500 text-white shadow-md"
+                    ? "bg-blue-500 text-white shadow-md"
                     : "text-gray-600 hover:bg-gray-200"
                 }`}
               >
@@ -105,7 +105,7 @@ const PricingComponent = () => {
                 onClick={() => setBillingCycle("annual")}
                 className={`px-6 py-2.5 rounded-full transition-all duration-300 relative ${
                   billingCycle === "annual"
-                    ? "bg-rose-500 text-white shadow-md"
+                    ? "bg-blue-500 text-white shadow-md"
                     : "text-gray-600 hover:bg-gray-200"
                 }`}
               >
@@ -171,7 +171,7 @@ const PricingComponent = () => {
               <ul className="mb-8 space-y-4 flex-grow">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start">
-                    <CheckCircle2 className="w-5 h-5 text-rose-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700 text-[15px]">{feature}</span>
                   </li>
                 ))}
@@ -183,8 +183,8 @@ const PricingComponent = () => {
                   transition-all duration-300 flex items-center justify-center space-x-2
                   ${
                     plan.mostPopular
-                      ? "bg-rose-500 text-white hover:bg-rose-600"
-                      : "bg-rose-50 text-rose-700 hover:bg-rose-100"
+                      ? "bg-blue-500 text-white hover:bg-blue-600"
+                      : "bg-blue-50 text-blue-700 hover:bg-blue-100"
                   }
                 `}
               >
@@ -197,7 +197,7 @@ const PricingComponent = () => {
 
         <div className="text-center mt-12 max-w-2xl mx-auto">
           <p className="text-gray-600 flex items-center justify-center">
-            <TrendingUp className="w-6 h-6 mr-2 text-rose-500" />
+            <TrendingUp className="w-6 h-6 mr-2 text-blue-500" />
             Transparent pricing with no hidden fees. Cancel anytime.
           </p>
         </div>
