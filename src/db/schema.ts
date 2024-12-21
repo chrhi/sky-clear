@@ -1,25 +1,12 @@
-import { sql } from "drizzle-orm";
-import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
+import { integer, pgTable, varchar } from "drizzle-orm/pg-core";
 
-export const blueskyAccounts = sqliteTable("bluesky_accounts", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
-  userId: integer("user_id")
-    .notNull()
-    .references(() => users.id),
-  identifier: text("identifier").notNull().unique(),
-  password: text("password").notNull(),
-  createdAt: text("created_at").default(sql`CURRENT_TIMESTAMP`),
-  updatedAt: text("updated_at").default(sql`CURRENT_TIMESTAMP`),
+export const blueSkeyAccountsTable = pgTable("blueSkeyAccounts", {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  userId: varchar({ length: 255 }).notNull(),
+  url: varchar({ length: 255 }).notNull().unique(),
+  password: varchar({ length: 255 }).notNull(),
 });
 
-export const users = sqliteTable("users", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
-  clerkUserId: text("clerk_id").notNull().unique(),
-  createdAt: text("created_at").default(sql`CURRENT_TIMESTAMP`),
-  updatedAt: text("updated_at").default(sql`CURRENT_TIMESTAMP`),
-});
+// post table content and postingTime and category and user Id
 
-export type BlueskyAccount = typeof blueskyAccounts.$inferSelect;
-export type NewBlueskyAccount = typeof blueskyAccounts.$inferInsert;
-export type User = typeof users.$inferSelect;
-export type NewUser = typeof users.$inferInsert;
+// blue sky connected Account

@@ -1,11 +1,6 @@
-import { drizzle } from "drizzle-orm/libsql";
-import { createClient } from "@libsql/client";
-import * as schema from "./schema";
+import { neon } from "@neondatabase/serverless";
+import { drizzle } from "drizzle-orm/neon-serverless";
 
-const turso = createClient({
-  url: "libsql://academia-abdellah.turso.io",
-  authToken:
-    "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3MzM0MDIxODQsImlkIjoiOWEzMGY4ZjYtYjM2My00ZDM4LTk3NDAtNGE3ODNhOGIwMjQ3In0.CBEkmh87WxKgfcagfVhS7mjpqyaQYAPT7L17a0PJKiX11fmqifBDAdoP81XHYxqevyGoMoOF1Eg0YkBVYUgODQ",
-});
-
-export const db = drizzle(turso, { schema });
+const sql = neon(process.env.DATABASE_URL!);
+//@ts-expect-error i copied this from the docs
+export const db = drizzle({ client: sql });
