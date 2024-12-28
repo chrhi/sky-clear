@@ -49,7 +49,7 @@ importers:
         version: 16.4.7
       drizzle-orm:
         specifier: ^0.37.0
-        version: 0.37.0(@libsql/client@0.14.0)(@neondatabase/serverless@0.10.4)(@types/pg@8.11.6)(@types/react@18.3.12)(react@19.0.0-rc-66855b96-20241106)
+        version: 0.37.0(@libsql/client@0.14.0)(@neondatabase/serverless@0.10.4)(@types/pg@8.11.6)(@types/react@18.3.12)(postgres@3.4.5)(react@19.0.0-rc-66855b96-20241106)
       graphql-request:
         specifier: ^7.1.2
         version: 7.1.2(graphql@16.9.0)
@@ -62,6 +62,9 @@ importers:
       next-safe-action:
         specifier: ^7.10.0
         version: 7.10.0(next@15.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106))(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)(zod@3.24.1)
+      postgres:
+        specifier: ^3.4.5
+        version: 3.4.5
       react:
         specifier: 19.0.0-rc-66855b96-20241106
         version: 19.0.0-rc-66855b96-20241106
@@ -2709,6 +2712,10 @@ packages:
   postgres-range@1.1.4:
     resolution: {integrity: sha512-i/hbxIE9803Alj/6ytL7UHQxRvZkI9O4Sy+J3HGc4F4oo/2eQAjTSNJ0bfxyse3bH0nuVesCk+3IRLaMtG3H6w==}
 
+  postgres@3.4.5:
+    resolution: {integrity: sha512-cDWgoah1Gez9rN3H4165peY9qfpEo+SA61oQv65O3cRUE1pOEoJWwddwcqKE8XZYjbblOJlYDlLV4h67HrEVDg==}
+    engines: {node: '>=12'}
+
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -4615,12 +4622,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.37.0(@libsql/client@0.14.0)(@neondatabase/serverless@0.10.4)(@types/pg@8.11.6)(@types/react@18.3.12)(react@19.0.0-rc-66855b96-20241106):
+  drizzle-orm@0.37.0(@libsql/client@0.14.0)(@neondatabase/serverless@0.10.4)(@types/pg@8.11.6)(@types/react@18.3.12)(postgres@3.4.5)(react@19.0.0-rc-66855b96-20241106):
     optionalDependencies:
       '@libsql/client': 0.14.0
       '@neondatabase/serverless': 0.10.4
       '@types/pg': 8.11.6
       '@types/react': 18.3.12
+      postgres: 3.4.5
       react: 19.0.0-rc-66855b96-20241106
 
   eastasianwidth@0.2.0: {}
@@ -5684,6 +5692,8 @@ snapshots:
   postgres-interval@3.0.0: {}
 
   postgres-range@1.1.4: {}
+
+  postgres@3.4.5: {}
 
   prelude-ls@1.2.1: {}
 
