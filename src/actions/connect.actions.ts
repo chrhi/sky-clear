@@ -40,6 +40,8 @@ export const getConnectedAccount = async (): Promise<ActionResponse> => {
       };
     }
 
+    console.log(account[0]);
+
     return {
       success: true,
       message: "Account retrieved successfully",

@@ -7,15 +7,12 @@ import {
   Workflow,
   Home,
   Settings,
-  Zap,
-  Bolt,
-  BarChart3,
-  Webhook,
   ChevronLeft,
   LucideIcon,
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import Compose from "../compose";
 
 interface SidebarItem {
   href: string;
@@ -34,13 +31,10 @@ const UserSkeleton = () => (
 );
 
 const SIDEBAR_ITEMS: SidebarItem[] = [
-  { href: "/dashboard", icon: Home, text: "Dashboard" },
-  { href: "/workflows", icon: Workflow, text: "Workflows" },
-  { href: "/integrations", icon: Webhook, text: "Integrations" },
-  { href: "/automations", icon: Zap, text: "Automations" },
-  { href: "/analytics", icon: BarChart3, text: "Analytics" },
-  { href: "/quick-actions", icon: Bolt, text: "Quick Actions" },
-  { href: "/settings", icon: Settings, text: "Settings" },
+  { href: "/dashboard", icon: Home, text: "Queue" },
+  { href: "/dashboard/my-posts", icon: Workflow, text: "My posts" },
+
+  { href: "/dashboard/settings", icon: Settings, text: "Settings" },
 ];
 
 const Sidebar = ({
@@ -123,7 +117,7 @@ const Sidebar = ({
           ))}
         </ul>
       </div>
-
+      <Compose />
       {/* Footer Section */}
       <div className="mt-auto pt-4 border-t border-gray-200">
         {/* Collapse Button */}

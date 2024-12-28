@@ -1,4 +1,3 @@
-import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { Dispatch, ReactNode, SetStateAction } from "react";
 import { Drawer } from "vaul";
@@ -37,9 +36,7 @@ export const Modal = ({
     }
   };
 
-  const { isMobile } = useMediaQuery();
-
-  if (isMobile && !desktopOnly) {
+  if (!desktopOnly) {
     return (
       <Drawer.Root
         open={setShowModal ? showModal : true}
