@@ -31,3 +31,9 @@ export type PostPayload = {
     images: PostImage[];
   };
 };
+
+export type ActionResponse = {
+  success: boolean;
+  message: string;
+  data?: any;
+};

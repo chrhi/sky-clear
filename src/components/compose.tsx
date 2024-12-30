@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
 import CreatePostForm from "./forms/create-post";
 
@@ -18,11 +12,7 @@ export default function Compose() {
           Create post
         </Button>
       </SheetTrigger>
-      <SheetContent>
-        <SheetHeader>
-          <SheetTitle>Create new post</SheetTitle>
-        </SheetHeader>
-
+      <SheetContent className="!h-full flex flex-col justify-between ">
         <CreatePostForm />
       </SheetContent>
     </Sheet>

@@ -2,6 +2,7 @@
 
 import { db } from "@/db";
 import { blueSkeyAccountsTable } from "@/db/schema";
+import { ActionResponse } from "@/types";
 import { currentUser } from "@clerk/nextjs/server";
 import { eq } from "drizzle-orm";
 import { z } from "zod";
@@ -10,12 +11,6 @@ const BlueSkyAccountSchema = z.object({
   identifier: z.string(),
   password: z.string(),
 });
-
-type ActionResponse = {
-  success: boolean;
-  message: string;
-  data?: any;
-};
 
 export const getConnectedAccount = async (): Promise<ActionResponse> => {
   try {
