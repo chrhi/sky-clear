@@ -8,12 +8,15 @@ export default async function Page() {
   const isAccountConneced = await getConnectedAccount();
 
   const posts = await getAllPostsAction();
-  console.log(posts);
 
   return (
     <PageShell title="Queue">
       <div className="w-full h-screen flex flex-col  items-center ">
-        {isAccountConneced.success ? <QueueComponent /> : <ConnectBsky />}
+        {isAccountConneced.success ? (
+          <QueueComponent posts={posts?.data ?? []} />
+        ) : (
+          <ConnectBsky />
+        )}
       </div>
     </PageShell>
   );

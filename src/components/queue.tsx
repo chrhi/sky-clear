@@ -5,23 +5,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CalendarDays, Clock, Trash2, Edit } from "lucide-react";
 
-const QueueComponent = () => {
+type Post = {
+  id: number;
+  userId: string;
+  text: string;
+  scheduledOn: string;
+  posted: boolean;
+  created_at: Date;
+  updated_at: Date;
+};
+
+type Props = {
+  posts: Post[];
+};
+
+const QueueComponent = ({ posts }: Props) => {
   // Mock data - replace with real data from your API
-  const [queuedPosts] = useState([
-    {
-      id: 1,
-      content:
-        "Excited to announce our latest feature release! #technology #innovation",
-      scheduledFor: "2024-12-29T10:00:00",
-      status: "scheduled",
-    },
-    {
-      id: 2,
-      content: "Join us for an upcoming webinar on modern web development!",
-      scheduledFor: "2024-12-30T15:30:00",
-      status: "scheduled",
-    },
-  ]);
+  const [queuedPosts] = useState(posts);
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4 space-y-6">
@@ -42,15 +42,15 @@ const QueueComponent = () => {
             >
               <div className="flex justify-between items-start gap-4">
                 <div className="flex-1 space-y-2">
-                  <p className="text-sm">{post.content}</p>
+                  <p className="text-sm">{post.text}</p>
                   <div className="flex items-center gap-4 text-sm text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <CalendarDays size={14} />
-                      {new Date(post.scheduledFor).toLocaleDateString()}
+                      {new Date(post.scheduledOn).toLocaleDateString()}
                     </span>
                     <span className="flex items-center gap-1">
                       <Clock size={14} />
-                      {new Date(post.scheduledFor).toLocaleTimeString()}
+                      {new Date(post.scheduledOn).toLocaleTimeString()}
                     </span>
                   </div>
                 </div>
