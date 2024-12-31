@@ -1,15 +1,19 @@
-// import { getConnectedAccount, connectBlueSkyAccount } from "@/actions/connect";
 import PageShell from "@/components/layout/page-shell";
-//import { ConnectBsky } from "@/components/modals/connect-bsky";
+import { ConnectBsky } from "@/components/modals/connect-bsky";
 import QueueComponent from "@/components/queue";
+import { getConnectedAccount } from "@/server/actions/connect.actions";
+import { getAllPostsAction } from "@/server/actions/pots.actions";
 
 export default async function Page() {
+  const isAccountConneced = await getConnectedAccount();
+
+  const posts = await getAllPostsAction();
+  console.log(posts);
+
   return (
     <PageShell title="Queue">
       <div className="w-full h-screen flex flex-col  items-center ">
-        {/* <ConnectBsky /> */}
-
-        <QueueComponent />
+        {isAccountConneced.success ? <QueueComponent /> : <ConnectBsky />}
       </div>
     </PageShell>
   );

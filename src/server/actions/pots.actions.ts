@@ -2,6 +2,7 @@
 import { db } from "@/db";
 import { postTable } from "@/db/schema";
 import { serverAction } from "@/server/__internals";
+import { eq } from "drizzle-orm";
 import { z } from "zod";
 
 const PostSchema = z.object({
@@ -37,9 +38,18 @@ export const createPostAction = async (data: z.infer<typeof PostSchema>) => {
 
 // get all posts
 
-// export const getAllPostsAction = async () => {
+export const getAllPostsAction = async () => {
+  return serverAction.protectedAction(async () => {
+    const posts = await db
+      .select()
+      .from(postTable)
+      .where(eq(postTable.userId, serverAction.user!.id));
 
-//   return serverAction.protectedAction(async () => {
+    return {
+      success: false,
+      message: "BlueSky account already connected for this user",
 
-//   } , "get-all-posts")
-// }
+      data: posts,
+    };
+  }, "get-all-posts");
+};
