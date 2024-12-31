@@ -32,8 +32,8 @@ export type PostPayload = {
   };
 };
 
-export type ActionResponse = {
+export type ActionResponse<T = any> = {
   success: boolean;
   message: string;
-  data?: any;
+  data?: T;
 };

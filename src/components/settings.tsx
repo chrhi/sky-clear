@@ -3,7 +3,7 @@
 import {
   deleteBlueSkyAccount,
   getConnectedAccount,
-} from "@/actions/connect.actions";
+} from "@/server/actions/connect.actions";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -21,14 +21,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 
 export const Settings = () => {
-  const [account, setAccount] = useState(null);
+  const [account, setAccount] = useState<any>(null);
   const router = useRouter();
 
   useEffect(() => {
     const loadAccount = async () => {
       const response = await getConnectedAccount();
       if (response.success) {
-        setAccount(response.data);
+        setAccount(response?.data);
       }
     };
     loadAccount();
